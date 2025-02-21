@@ -1,0 +1,17 @@
+<h1>Attendance Report</h1>
+<table>
+    <tr>
+        <th>Employee</th>
+        <th>Date</th>
+        <th>Time In</th>
+        <th>Time Out</th>
+    </tr>
+    {% for attendance in attendances %}
+    <tr>
+        <td>{{ attendance.employee.user.username }}</td>
+        <td>{{ attendance.date }}</td>
+        <td>{{ attendance.time_in }}</td>
+        <td>{{ attendance.time_out }}</td>
+    </tr>
+    {% endfor %}
+</table>
